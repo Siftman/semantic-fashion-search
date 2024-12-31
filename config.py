@@ -1,0 +1,5 @@
+# Example config.py
+API_BASE_URL = "YOUR_API_ENDPOINT"
+AUTH_TOKEN = "YOUR_AUTH_TOKEN"
+QDRANT_HOST = "localhost"
+QDRANT_PORT = 6333 
