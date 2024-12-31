@@ -79,8 +79,8 @@ def send_ack_ids(ids):
     while True:
         try:
             res = requests.post(
-                url="YOUR_API_ENDPOINT/api/v1/ai-search/submit-encoded-medias/",
-                headers={"Authorization": "Token YOUR_AUTH_TOKEN"},
+                url="API_ENDPOINT/api/v1/ai-search/submit-encoded-medias/",
+                headers={"Authorization": "Token AUTH_TOKEN"},
                 json={"ids": ids},
             )
             res.raise_for_status()
@@ -126,8 +126,8 @@ def embed2point(medias, embeddings):
 
 def fetch_medias_to_encode(count):
     res = requests.get(
-        f"YOUR_API_ENDPOINT/api/v1/ai-search/medias-to-encode/?count={count}",
-        headers={"Authorization": "Token YOUR_AUTH_TOKEN"},
+        f"API_ENDPOINT/api/v1/ai-search/medias-to-encode/?count={count}",
+        headers={"Authorization": "Token AUTH_TOKEN"},
     )
     res.raise_for_status()
     return res.json()
