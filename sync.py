@@ -16,7 +16,7 @@ def fetch_update_logs():
 def sync_logs(logs):
     for log in logs:
         qdrant_client.set_payload(
-            collection_name="your_company_name",
+            collection_name="dbstore",
             payload={
                 "title": log["title"],
                 "category_id": log["category_id"],
